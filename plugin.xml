@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-materialcircle"
+        version="1.0.0">
+    <name>MaterialCircle</name>
+    <description>Cordova iOS Material Circle Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,material,ios,preloader</keywords>
+    <repo>https://github.com/roman-rr/cordova-plugin-ios-materialcircle.git</repo>
+    <issue>https://github.com/roman-rr/cordova-plugin-ios-materialcircle/issues</issue>
+
+    <engines>
+        <engine name="cordova-ios" version=">=6.0.0" />
+    </engines>
+
+    <js-module src="www/materialcircle.js" name="MaterialCircle">
+        <clobbers target="cordova.plugins.materialcircle" />
+    </js-module>
+
+    <!-- ios: OUR SOLUTION FOR preloader -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+		    <feature name="MaterialCircle">
+			    <param name="ios-package" value="CDVMaterialCircle"/>
+			    <param name="onload" value="true"/>
+		    </feature>
+        </config-file>
+
+        <header-file src="src/ios/CDVMaterialCircle.h" />
+        <source-file src="src/ios/CDVMaterialCircle.m" />
+
+        <framework src="CoreGraphics.framework" />
+            
+        <podspec>
+            <config>
+                <source url="https://cdn.cocoapods.org/"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="MaterialComponents/ActivityIndicator" />
+            </pods>
+        </podspec>
+
+    </platform>
+</plugin>

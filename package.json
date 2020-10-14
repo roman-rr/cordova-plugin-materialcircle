@@ -1,0 +1,23 @@
+{
+  "name": "cordova-plugin-materialcircle",
+  "version": "1.0.0",
+  "description": "Cordova iOS Material Circle Plugin",
+  "cordova": {
+    "id": "cordova-plugin-materialcircle",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": "github:apache/cordova-plugin-materialcircle",
+  "bugs": "https://github.com/apache/cordova-plugin-materialcircle/issues",
+  "keywords": [
+    "cordova",
+    "materialcircle",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": {
+    "cordova": ">=6.0.0"
+  },
+  "author": "Roman Antonov (romwtb@gmail.com)"
+}
